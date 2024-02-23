@@ -1,8 +1,7 @@
 import cv2
 import pandas as pd
 from ultralytics import YOLO
-from tracker import*
-import cvzone
+
 
 model=YOLO('yolov8s.pt')
 
@@ -26,12 +25,6 @@ class_list = data.split("\n")
 #print(class_list)
 
 count=0
-
-tracker=Tracker()
-
-cy1=322
-cy2=368
-offset=6
 
 while True:    
     ret,frame = cap.read()
